@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Durgadevi Balaji | Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Pretty Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main-gradient: linear-gradient(120deg, #ffd8cb 0%, #ffb0f7 70%, #ffb0f7 100%);
+      --card-radius: 28px;
+      --card-shadow: 0 8px 40px #ecbad941;
+      --card-border: 1.5px solid #f3d6ed;
+      --photo-bg: #e4e0e9;
+      --photo-block: #e7e3eb;
+      --image-placeholder: #d0c8d2;
+      --magenta: #b12daf;
+      --pink: #db36a4;
+      --purple: #7329a2;
+      --heading: #b12daf;
+      --link: #b12daf;
+      --link-hover: #e12da4;
+      --box-bg: linear-gradient(90deg, #f7c7e5 0%, #f7bce4 100%);
+      --primary-btn-bg: linear-gradient(90deg,#db36a4 0%, #b12daf 100%);
+      --primary-btn-text: #fff;
+      --secondary-btn-bg: #fff;
+      --secondary-btn-border: #b12daf;
+      --secondary-btn-text: #b12daf;
+      --grey-right: #fff; /* Changed from gray to white */
+      --body-text: #332033;
+    }
+    html, body {height: 100%;}
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      background: var(--main-gradient);
+      font-family: 'Quicksand', Arial, sans-serif;
+      color: var(--body-text);
+    }
+    .card {
+      max-width: 910px;
+      margin: 52px auto;
+      background: #fff;
+      border-radius: var(--card-radius);
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: row;
+      border: var(--card-border);
+      overflow: visible;
+      min-height: 410px;
+      position: relative;
+    }
+    .card-left {
+      flex: 2.2;
+      padding: 54px 34px 38px 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .card-right {
+      flex: 1.2;
+      background: var(--grey-right); /* This is now white */
+      padding: 0;
+      position: relative;
+      min-width: 195px;
+    }
+    .profile-photo {
+      position: absolute;
+      top: 38px;
+      right: 38px;
+      width: 130px;
+      height: 130px;
+      border-radius: 13px;
+      object-fit: cover;
+      background: var(--photo-block);
+      box-shadow: 0 2px 16px #eadbe2;
+      border: 4px solid #f3d6ed;
+      display: block;
+      z-index: 5;
+    }
+    .hello {
+      font-size: 1.13em;
+      font-weight: 700;
+      margin-bottom: 11px;
+      color: var(--purple);
+      font-family: 'Montserrat', sans-serif;
+    }
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.3em;
+      font-weight: 800;
+      color: var(--heading);
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+    .subtitle {
+      font-size: 1.18em;
+      color: #cc48dc;
+      font-weight: 600;
+      margin-top: 2px;
+      margin-bottom: 24px;
+    }
+    .about-label {
+      font-size: 1.1em;
+      font-weight: 700;
+      color: var(--heading);
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 7px;
+      margin-top: 5px;
+    }
+    .about-box {
+      margin-bottom: 18px;
+      background: #fff;
+      border-radius: 13px;
+      padding: 17px 18px;
+      font-size: 1.11em;
+      color: var(--body-text);
+      box-shadow: 0 2px 10px #ffb0f71a;
+      border: 1px solid #f2dce7;
+    }
+    .gap { margin-top: 46px; }
+    .section-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      color: var(--heading);
+      font-size: 1.29em;
+      letter-spacing: 0.7px;
+      padding-bottom: 2.5px;
+      margin-bottom: 11px;
+    }
+    /* Projects */
+    .projects-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+    .project-card {
+      background: var(--box-bg);
+      border-radius: 14px;
+      padding: 15px 18px 13px 18px;
+      min-width: 225px;
+      box-sizing: border-box;
+      flex: 1 1 250px;
+      color: var(--body-text);
+      margin-bottom: 12px;
+      border: 1.5px solid #f3d6ed;
+      font-size: 1em;
+      font-family: 'Quicksand', Arial, sans-serif;
+      box-shadow: 0 2px 10px #e5b9f030;
+    }
+    .project-title {
+      color: var(--magenta);
+      font-weight: bold;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.07em;
+      margin-bottom: 5px;
+    }
+    .project-desc {margin: 0;}
+    /* Contact Template */
+    .contact-template {
+      margin-top: 39px;
+      margin-bottom: 0;
+    }
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 24px;
+      margin: 12px 0 0 0;
+    }
+    .contact-item {
+      background: var(--box-bg);
+      border-radius: 13px;
+      padding: 15px 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-width: 170px;
+      font-size: 1.08em;
+      border: 1px solid #f3d6ed;
+    }
+    .contact-label {
+      font-size: 1.04em;
+      color: var(--magenta);
+      font-weight: 700;
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin-bottom: 3px;
+    }
+    .contact-link, .contact-link-black {
+      word-break: break-all;
+      color: #222;    /* black color for email and linkedin links */
+      font-size: 1.07em;
+      text-decoration: underline;
+      transition: color .16s;
+      font-weight: 700;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    .contact-link-black:hover { color: #444;}
+    .contact-info {
+      color: var(--body-text);
+      font-weight: 700;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    @media (max-width:800px){
+      .card{flex-direction:column;min-width:320px;}
+      .card-left{padding:36px 10px 7px 10px;}
+      .card-right{padding:0;min-height:180px;}
+      .smart-row, .projects-list, .contact-row{flex-direction:column;gap:7px;}
+      .profile-photo{
+        position: static;
+        margin: 20px auto 18px auto;
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-left">
+      <div class="hello">Hello 👋</div>
+      <h1>Durgadevi Balaji</h1>
+      <div class="subtitle">FIrst year Btech Student</div>
+      <div class="about-label"> About me </div>
+      <div class="about-box">
+        I am a first-year B.Tech Computer Science and Engineering student with a keen interest in technology and problem-solving. I completed my schooling at Velammal Matriculation Higher Secondary School (VMHSS), where I was introduced to programming through C++ and Python, which sparked my curiosity for coding and software development. I enjoy learning new technologies and applying them to real-world challenges. Beyond academics, I value teamwork and communication, as I believe they play a key role in professional growth. I aim to build a strong foundation in computer science and contribute meaningfully to innovative projects in the future.
+      </div>
+      <div class="gap"></div>
+      <div class="section-title">Projects</div>
+      <div class="projects-list">
+        <div class="project-card">
+          <div class="project-title">Project Title 1</div>
+          <div class="project-desc">NONE</div>
+        </div>
+        <div class="project-card">
+          <div class="project-title">Project Title 2</div>
+          <div class="project-desc">NONE</div>
+        </div>
+      </div>
+      <div class="contact-template">
+        <div class="section-title" style="margin-top:0;">Contact Me</div>
+        <div class="contact-row">
+          <div class="contact-item">
+            <span class="contact-label">Email</span>
+            <a class="contact-link-black" href="mailto:balajidurgadevi05@gmail.com">balajidurgadevi05@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">LinkedIn</span>
+            <a class="contact-link-black" href="https://www.linkedin.com/in/durgadevibalaji2" target="_blank">https://www.linkedin.com/in/durgadevibalaji2</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Phone</span>
+            <span class="contact-info">+91-9384653636</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-right">
+      <img src="image.jpg" alt="Your Photo" class="profile-photo">
+    </div>
+  </div>
+</body>
+</html>
